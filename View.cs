@@ -20,17 +20,17 @@ namespace Capstone_BMS
 
         private void View_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01; database = BookMS; integrated security = True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-
-            cmd.CommandText = "select * from Availabiliti";
-            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            SqlConnection con = new SqlConnection("data source = USHYDSARAYAVAR2\\MSSQLSERVER01; database = BookMS; integrated security = True");
+            SqlDataAdapter DA = new SqlDataAdapter("select * from ResDesk",con);
             DataSet DS = new DataSet();
             DA.Fill(DS);
             
             dataGridView1.DataSource = DS.Tables[0];
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

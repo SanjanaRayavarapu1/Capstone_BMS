@@ -41,15 +41,16 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 37);
+            this.label1.Location = new System.Drawing.Point(44, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 25);
+            this.label1.Size = new System.Drawing.Size(153, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter ID :";
+            this.label1.Text = "Enter DeskNo :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 38);
+            this.textBox1.Location = new System.Drawing.Point(215, 37);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(280, 26);
             this.textBox1.TabIndex = 1;
@@ -59,7 +60,7 @@
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(456, 33);
+            this.btnDelete.Location = new System.Drawing.Point(521, 32);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(114, 35);
             this.btnDelete.TabIndex = 2;

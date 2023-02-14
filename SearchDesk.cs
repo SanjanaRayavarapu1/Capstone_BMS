@@ -22,13 +22,8 @@ namespace Capstone_BMS
         {
             if (txtSearch.Text != "")
             {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                cmd.CommandText = "select * from ResDesk where MID =" + txtSearch.Text + "";
-                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                SqlConnection con = new SqlConnection("data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True");
+                SqlDataAdapter DA = new SqlDataAdapter("select * from ResDesk where MID =" + txtSearch.Text + "",con);
                 DataSet DS = new DataSet();
                 DA.Fill(DS);
 
@@ -36,7 +31,7 @@ namespace Capstone_BMS
             }
             else
             {
-                MessageBox.Show("Please enter ID!","Message",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter MeetingId!","Message",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
@@ -53,6 +48,16 @@ namespace Capstone_BMS
             DA.Fill(DS);
 
             dataGridView1.DataSource = DS.Tables[0];
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

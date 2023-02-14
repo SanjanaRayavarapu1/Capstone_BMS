@@ -29,12 +29,13 @@ namespace Capstone_BMS
 
         private void reserveDeskToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+           SearchDesk rd = new SearchDesk();
+            rd.Show();
         }
 
         private void availabilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Availablility nm = new Availablility();
+            ResDesk nm = new ResDesk();
             nm.Show();
         }
 
@@ -44,15 +45,15 @@ namespace Capstone_BMS
             nm.Show();
         }
 
-        private void meetingRoomToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ResTable nm = new ResTable();
-            nm.Show();  
-        }
+        //private void meetingRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+          //  ResTable nm = new ResTable();
+            //nm.Show();  
+        //}
 
         private void searchDeskToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchDesk sm = new SearchDesk();   
+            View sm = new View();   
             sm.Show();
         }
 
@@ -79,8 +80,8 @@ namespace Capstone_BMS
             if(MessageBox.Show("Logout! Confirm?","Logout",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)==DialogResult.OK)
             {
                 this.Close();
-                Login lg = new Login();
-                lg.Show();
+                //Login lg = new Login();
+                //lg.Show();
             }
         }
     }

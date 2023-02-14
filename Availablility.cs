@@ -42,5 +42,10 @@ namespace Capstone_BMS
             View ve = new View();
             ve.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

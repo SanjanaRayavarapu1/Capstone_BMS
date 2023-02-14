@@ -46,6 +46,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDesk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDesk.Designer.cs">
+      <DependentUpon>AddDesk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approve.Designer.cs">
+      <DependentUpon>Approve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FloorDesk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloorDesk.Designer.cs">
+      <DependentUpon>FloorDesk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2.Designer.cs">
+      <DependentUpon>2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3.Designer.cs">
+      <DependentUpon>3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4.Designer.cs">
+      <DependentUpon>4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5.Designer.cs">
+      <DependentUpon>5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.Designer.cs">
+      <DependentUpon>6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7.Designer.cs">
+      <DependentUpon>7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Availablility.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +130,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,12 +144,6 @@
     <Compile Include="ResDesk.Designer.cs">
       <DependentUpon>ResDesk.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResTable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResTable.Designer.cs">
-      <DependentUpon>ResTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="SearchDesk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +156,39 @@
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddDesk.resx">
+      <DependentUpon>AddDesk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approve.resx">
+      <DependentUpon>Approve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloorDesk.resx">
+      <DependentUpon>FloorDesk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2.resx">
+      <DependentUpon>2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3.resx">
+      <DependentUpon>3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4.resx">
+      <DependentUpon>4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5.resx">
+      <DependentUpon>5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6.resx">
+      <DependentUpon>6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7.resx">
+      <DependentUpon>7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Availablility.resx">
       <DependentUpon>Availablility.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>
@@ -128,9 +212,6 @@
     </Compile>
     <EmbeddedResource Include="ResDesk.resx">
       <DependentUpon>ResDesk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResTable.resx">
-      <DependentUpon>ResTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchDesk.resx">
       <DependentUpon>SearchDesk.cs</DependentUpon>

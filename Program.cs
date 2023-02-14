@@ -16,7 +16,7 @@ namespace Capstone_BMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Persona());
+            Application.Run(new _1());
         }
     }
 }
