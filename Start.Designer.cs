@@ -69,9 +69,12 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "_1";
+            this.Load += new System.EventHandler(this._1_Load);
             this.ResumeLayout(false);
 
         }

@@ -29,7 +29,7 @@ namespace Capstone_BMS
  
             SqlConnection conn = new SqlConnection("data source = USHYDSARAYAVAR2\\MSSQLSERVER01; database = BookMS; integrated security = True");
 
-            SqlDataAdapter ad = new SqlDataAdapter("SELECT * FROM EmpSignUp WHERE EmpID='2' AND EmID= '" + textBox1.Text + "'AND Pass= '" + textBox2.Text + "'", conn);
+            SqlDataAdapter ad = new SqlDataAdapter("SELECT * FROM EmpSignUp WHERE RoleID='2' AND EmID= '" + textBox1.Text + "'AND Pass= '" + textBox2.Text + "'", conn);
             DataTable dt = new DataTable();
             ad.Fill(dt);
             if (dt.Rows.Count > 0)
@@ -37,6 +37,8 @@ namespace Capstone_BMS
                 this.Hide();
                 Form2 fm = new Form2();
                 fm.Show();
+                MessageBox.Show("Logged in Successfully");
+
             }
             else { MessageBox.Show("Invalid"); }
 

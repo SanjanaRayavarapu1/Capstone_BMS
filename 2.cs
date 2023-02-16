@@ -28,5 +28,10 @@ namespace Capstone_BMS
             _5 fm = new _5();
             fm.Show();
         }
+
+        private void _2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

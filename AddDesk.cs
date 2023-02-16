@@ -30,7 +30,7 @@ namespace Capstone_BMS
             SqlDataAdapter ad = new SqlDataAdapter("INSERT INTO [dbo].[Desk](Sname,capacity,DeskNo)VALUES('"+comboBox1.SelectedItem.ToString()+"','"+comboBox2.SelectedItem.ToString()+"','"+textBox1.Text+"')", con);
             DataTable dt = new DataTable();
             ad.Fill(dt);
-            MessageBox.Show("Desk added");
+            MessageBox.Show("Desk added successfully");
             this.Close();
         }
     }

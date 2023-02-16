@@ -64,7 +64,7 @@ namespace Capstone_BMS
             SqlDataAdapter DA = new SqlDataAdapter(cmd);
             DataSet DS = new DataSet();
             DA.Fill(DS);
-            MessageBox.Show("Data Saved!" + SZName);
+            MessageBox.Show("Desk Reserved!" + SZName);
             this.Close();
         }
     }

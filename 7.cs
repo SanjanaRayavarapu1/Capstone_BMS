@@ -32,20 +32,23 @@ namespace Capstone_BMS
         {
             String EName = textBox1.Text;
             String EmpID = textBox2.Text;
+            String RoleID= textBox5.Text;
             String EmID = textBox3.Text;
             String Pass = textBox4.Text;
+
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01; database = BookMS; integrated security = True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "insert into EmpSignUp (EName,EmpID,EmID,Pass) values ('" + EName + "','" + EmpID + "','" + EmID + "','" + Pass + "')";
+            cmd.CommandText = "insert into EmpSignUp (EName,EmpID,RoleID,EmID,Pass) values ('" + EName + "','" + EmpID + "','" + RoleID + "','" + EmID + "','" + Pass + "')";
             SqlDataAdapter DA = new SqlDataAdapter(cmd);
             DataSet DS = new DataSet();
             DA.Fill(DS);
             MessageBox.Show("Data Saved!");
             _5 gp = new _5();
             gp.Show();
+            MessageBox.Show("Signed Up Successfully");
 
         }
     }

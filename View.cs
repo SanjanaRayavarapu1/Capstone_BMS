@@ -13,6 +13,7 @@ namespace Capstone_BMS
 {
     public partial class View : Form
     {
+        
         public View()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace Capstone_BMS
 
         private void View_Load(object sender, EventArgs e)
         {
+            
             SqlConnection con = new SqlConnection("data source = USHYDSARAYAVAR2\\MSSQLSERVER01; database = BookMS; integrated security = True");
             SqlDataAdapter DA = new SqlDataAdapter("select * from ResDesk",con);
             DataSet DS = new DataSet();

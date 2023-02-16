@@ -31,6 +31,7 @@ namespace Capstone_BMS
         private void button1_Click(object sender, EventArgs e)
         {
             String SZName = comboBox1.Text;
+
             String DayDate = dateTimePicker1.Text;
             String StartTime = comboBox2.Text;
             String EndTime = comboBox3.Text;

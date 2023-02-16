@@ -33,7 +33,7 @@ namespace Capstone_BMS
         {
             if (MessageBox.Show("Logout! Confirm?", "Logout", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                //this.Close();
+                this.Close();
                // Login lg = new Login();
                 //lg.Show();
                 _2 lg= new _2();
@@ -74,6 +74,12 @@ namespace Capstone_BMS
         {
             Approve pm = new Approve();
             pm.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FloorDesk fl= new FloorDesk();
+            fl.Show();
         }
     }
 }

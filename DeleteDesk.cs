@@ -25,7 +25,9 @@ namespace Capstone_BMS
                 SqlConnection con = new SqlConnection("data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True");
                 //con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True";
                 //SqlDataAdapter DA = new SqlDataAdapter("delete from Desk where DeskNo = " + textBox1.Text + "",con);
+                con.Open();
                 SqlCommand cmd = new SqlCommand("delete from Desk where DeskNo = '" + textBox1.Text + "'", con);
+                //DataTable dt = new DataTable();
                 //cmd.Connection = con;
                 //cmd.CommandText = "delete from Desk where DeskNo = " + textBox1.Text + "";
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
@@ -34,8 +36,10 @@ namespace Capstone_BMS
                 //con.Open();
                 //cmd.ExecuteNonQuery();
                 //con.Close();
-                   
-                dataGridView1.DataSource = DS.Tables[0];
+                dataGridView1.DataSource = DS;
+                this.Close();
+                //dataGridView1.DataSource = DS.Tables[0];
+                MessageBox.Show("Desk Deleted Successfully");
             }
             else
             {
@@ -51,17 +55,20 @@ namespace Capstone_BMS
 
         private void DeleteDesk_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
+            SqlConnection con = new SqlConnection("data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True");
+            //con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01;database = BookMS; integrated security=True";
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Desk",con);
+            //cmd.Connection = con;
 
-            cmd.CommandText = "select * from Desk";
+            //cmd.CommandText = "select * from Desk";
+            DataTable dt = new DataTable();
             SqlDataAdapter DA = new SqlDataAdapter(cmd);
-            DataSet DS = new DataSet();
-            DA.Fill(DS);
-
-            dataGridView1.DataSource = DS.Tables[0];
+            DA.Fill(dt);
+            //DataSet DS = new DataSet();
+            //DA.Fill(DS);
+            dataGridView1.DataSource = dt;
+            //dataGridView1.DataSource = DS.Tables[0];
         }
 
         private void label1_Click(object sender, EventArgs e)
