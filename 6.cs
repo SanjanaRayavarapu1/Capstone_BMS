@@ -13,6 +13,7 @@ namespace Capstone_BMS
 {
     public partial class _6 : Form
     {
+        //public static string employeename;
         //public String EmployeeID { get; set; }
         public _6()
         {
