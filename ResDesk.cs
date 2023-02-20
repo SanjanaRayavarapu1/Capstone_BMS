@@ -37,6 +37,7 @@ namespace Capstone_BMS
             String EndTime = comboBox3.Text;
             String capacity=comboBox4.Text;
             String email = _4.username;
+            String emid = _6.employeeid;
             if (SZName ==null|| SZName.Length ==0)
             {
                 MessageBox.Show("Please slect your space");
@@ -63,11 +64,12 @@ namespace Capstone_BMS
                 return;
             }
 
+
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "data source = USHYDSARAYAVAR2\\MSSQLSERVER01; database = BookMS; integrated security = True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT INTO [dbo].[ResDesk]([SZName],[DayDate],[StartTime],[EndTime],[capacity],[EmpName]) VALUES ('" + SZName + "','" + DayDate + "','" + StartTime + "','" + EndTime + "','" +capacity+ "','"+email+"')";
+            cmd.CommandText = "INSERT INTO [dbo].[ResDesk]([SZName],[DayDate],[StartTime],[EndTime],[capacity],[EmpName],[EmpID]) VALUES ('" + SZName + "','" + DayDate + "','" + StartTime + "','" + EndTime + "','" +capacity+ "','"+email+"','"+emid+"')";
             SqlDataAdapter DA = new SqlDataAdapter(cmd);
             DataSet DS = new DataSet();
             DA.Fill(DS);

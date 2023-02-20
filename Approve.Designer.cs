@@ -31,6 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MeetingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpaceZone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DayDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +60,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MeetingID,
+            this.EmployeeID,
+            this.EmployeeName,
             this.SpaceZone,
             this.DayDate,
             this.StartTime,
@@ -84,6 +88,24 @@
             this.MeetingID.Name = "MeetingID";
             this.MeetingID.ReadOnly = true;
             this.MeetingID.Width = 150;
+            // 
+            // EmployeeID
+            // 
+            this.EmployeeID.DataPropertyName = "EmpID";
+            this.EmployeeID.HeaderText = "EmployeeID";
+            this.EmployeeID.MinimumWidth = 8;
+            this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.ReadOnly = true;
+            this.EmployeeID.Width = 150;
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.DataPropertyName = "EmpName";
+            this.EmployeeName.HeaderText = "EmployeeName";
+            this.EmployeeName.MinimumWidth = 8;
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.ReadOnly = true;
+            this.EmployeeName.Width = 150;
             // 
             // SpaceZone
             // 
@@ -179,6 +201,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MeetingID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SpaceZone;
         private System.Windows.Forms.DataGridViewTextBoxColumn DayDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;

@@ -25,7 +25,7 @@ namespace Capstone_BMS
         {
 
             SqlConnection con = new SqlConnection("Data Source=USHYDSARAYAVAR2\\MSSQLSERVER01;Initial Catalog=BookMS;Integrated Security=True");
-            SqlDataAdapter ad = new SqlDataAdapter("SELECT * FROM EmpSignUp WHERE RoleID='1' AND EName= '" + textBox1.Text + "'AND Pass= '" + textBox2.Text + "'", con);
+            SqlDataAdapter ad = new SqlDataAdapter("SELECT * FROM EmpSignUp WHERE RoleID='1' AND EName= '" +textBox1.Text +"' AND Pass= '" + textBox2.Text + "'", con);
             DataTable dt = new DataTable();
             ad.Fill(dt);
             if (dt.Rows.Count > 0)
