@@ -38,6 +38,8 @@ namespace Capstone_BMS
             String capacity=comboBox4.Text;
             String email = _4.username;
             String emid = _6.employeeid;
+
+
             if (SZName ==null|| SZName.Length ==0)
             {
                 MessageBox.Show("Please slect your space");
